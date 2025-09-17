@@ -1,0 +1,30 @@
+/* iOS full-bleed fixes: geen witte balk, ook niet als PWA */
+:root{
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+
+html, body { height: 100%; background-color:#082616; }
+
+body{
+  /* 100svh pakt de “small viewport” en voorkomt de iOS witte strook */
+  min-height: 100svh;
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+  overscroll-behavior-y: none;
+}
+
+/* Zorg dat de hoofdpagina ook echt full-bleed is */
+main{
+  min-height: 100svh;
+}
+
+/* Hero-achtergrond zonder shorthand-conflict: geen mix van background + backgroundSize */
+.hero-full{
+  min-height: 100svh;
+  background-image: var(--hero-image, none);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;      /* geen 'background' shorthand gebruiken */
+  background-attachment: scroll;
+}

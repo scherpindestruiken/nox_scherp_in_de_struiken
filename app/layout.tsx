@@ -1,4 +1,4 @@
-"use client";
+import Topbar from "./components/Topbar";"use client";
 import "./globals.css";
 import Nav from "./components/Nav";
 import { usePathname } from "next/navigation";

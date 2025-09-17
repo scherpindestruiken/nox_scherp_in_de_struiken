@@ -113,7 +113,7 @@ export default function Nav() {
         </button>
 
         <h1 style={{ margin: 0, flex: 1, textAlign: "center", color: "#d6c98b" }}>
-          Scherp in de Struiken
+          <span style={{fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 700}}>Scherp in de Struiken</span>
         </h1>
 
         <div style={{ width: 64 }} />
@@ -136,6 +136,7 @@ export default function Nav() {
         }}
       >
         <div style={{ padding: 16 }}>
+          <h2 style={{ margin: "0 0 12px", fontSize: "1.1rem", color: "#b8a66a" }}></h2>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             <li style={{ margin: "10px 0" }}><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
             <li style={{ margin: "10px 0" }}><Link href="/blog" onClick={() => setMenuOpen(false)}>Nox' Blog</Link></li>
