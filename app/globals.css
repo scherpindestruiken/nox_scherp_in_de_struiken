@@ -1,0 +1,123 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body, #__next {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: none;
+  color: #e8f5e8;
+}
+img, video, canvas { display: block; max-width: 100%; }
+
+:root {
+  --text-color: #b8a66a;
+}
+
+html, body {
+  color: var(--text-color);
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+:root{--text-color:#b8a66a}
+html,body{color:var(--text-color)}
+a{color:var(--text-color);text-decoration:underline}
+a:hover{opacity:.9}
+
+:root {
+  --bg: #0d1b0d;
+  --shadow: 0 12px 24px rgba(0,0,0,0.35);
+  --text-color: #b8a66a;
+}
+
+:root {
+  --bg: #0d1b0d;
+  --shadow: 0 12px 24px rgba(0,0,0,0.35);
+  --text-color: #b8a66a;
+}
+
+/* ===== site header & titel (globaal, geen styled-jsx nodig) ===== */
+.site-title {
+  color: #b8a66a;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin: 0;
+  pointer-events: none; /* geen klik-conflict met hamburger */
+}
+/* forceren: geen gekleurde balk uit Nav */
+.topbar {
+  background: #0d1b0d;
+  padding: 0 !important;
+  
+}
+
+/* override: make header/nav transparent */
+.topbar{background:transparent!important;box-shadow:none!important;border-bottom:none!important}
+.site-header{display:none!important}
+
+/* Fix: verwijder groene/zwarte balk achter de transparante header */
+html, body {
+  background: #0d0d0d !important; /* egaal donkergrijs-zwart */
+  margin: 0;
+  padding: 0;
+}
+.topbar {
+  background: transparent !important;
+  height: 60px; /* vaste hoogte */
+  padding: 0 40px !important; /* meer ruimte hamburger en login van de rand */
+}
+
+/* --- NAV FIX OVERRIDE --- */
+.topbar{
+  position: absolute !important;
+  left: 0; top: 0; right: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 8px 40px !important; /* meer afstand van randen */
+  z-index: 999 !important;
+}
+/* hamburger fix */ .hamburger{width:32px;height:22px;padding:4px;background:transparent!important;border:none!important;box-shadow:none!important} .hamburger span{display:block;height:2px;width:24px;margin:4px 0;background:#d6c98b!important}/* drawer boven de topbar zetten */ .backdrop{z-index:1000!important} .drawer{z-index:1001!important}
+
+/* fix: subpagina-achtergrond onder hero niet zwart maar groen */
+:root{--page-bg:#0d1b0d}
+html,body{background:var(--page-bg)!important}
+main{background:var(--page-bg)!important;min-height:100vh}
+
+/* ===== Achtergrond regels ===== */
+
+/* Altijd standaard groene achtergrond */
+html, body {
+  background: #0d1b0d;
+  min-height: 100%;
+}
+
+/* Alle pagina’s standaard groene achtergrond */
+main {
+  background: #0d1b0d;
+  min-height: 100vh;
+}
+
+/* Homepagina → main transparant zodat achtergrond.png zichtbaar is */
+body.home main {
+  background: transparent;
+}
+
+/* Home: echte fullscreen achtergrondafbeelding */
+body.home{
+  background: #0d1b0d url("/images/achtergrond.png") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Homepagina fullscreen achtergrond */
+.home-bg {
+  min-height: 100vh;
+  background-color: #0d1b0d;
+  background-image: url("/images/achtergrond.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

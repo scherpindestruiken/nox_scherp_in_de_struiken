@@ -1,0 +1,42 @@
+# dependencies
+node_modules
+
+# Next.js / Vercel
+.next
+out
+.vercel
+.vercel/output
+
+# Cloudflare next-on-pages
+.open-next
+.open-next/**
+
+# Netlify
+.netlify
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS / editors
+.DS_Store
+.idea
+.vscode
+*.swp
+
+# Coverage / build
+coverage
+dist
+
+# Misc
+*.bak
+*.tmp
+
+# Project helpers
+tools/

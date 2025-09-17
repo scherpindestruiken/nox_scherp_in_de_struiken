@@ -1,0 +1,66 @@
+.page {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-color);
+}
+
+/* Gecentreerde sitetitel op dezelfde regel/hoogte als de navbar */
+.siteHeader {
+  position: fixed;       /* zweeft bovenaan, op dezelfde hoogte als de navbar */
+  top: 8px;              /* pas aan als je nav hoger/lager is */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  pointer-events: none;  /* blokkeert je nav-links niet */
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-weight: 700;
+  color: #b8a66a;        /* gewenste goudkleur */
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  padding: 32px 0 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--bg);
+}
+.heroCard {
+  max-width: 1100px;
+  width: min(90vw, 1100px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.fade {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(13,27,13,0) 0%, var(--bg) 100%);
+  pointer-events: none;
+}
+
+/* Titel onder de hero */
+.blogTitle {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 16px 0 24px;
+}
+
+/* Content */
+.content {
+  max-width: 960px;
+  margin: 0 auto 64px;
+  padding: 0 16px;
+}
