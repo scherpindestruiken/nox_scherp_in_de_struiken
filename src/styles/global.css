@@ -107,28 +107,8 @@ a, a:visited { color:#b8a86d; }
   color: #b8a86d;
 }
 
-/* Responsive fix voor iPhone */
-@media (max-width: 640px) {
-  .hero {
-    height: 280px;
-    background-position: center 25%;
-  }
-  .page-title {
-    font-size: 1.6rem;
-  }
-}
-
-/* -- Mobile hero tuning: alleen subpagina's met .hero -- */
-@media (max-width: 480px) {
-  .hero{
-    height: 360px;               /* wat hoger, zodat Nox past */
-    background-position: center 25%;  /* iets hoger in beeld */
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px){
-  .hero{
-    height: 420px;               /* tablet-hoogte */
-    background-position: center 35%;
-  }
+/* Hero: vaste beeldverhouding voor identieke uitsnede op alle schermen */
+.hero{
+  aspect-ratio: 1920 / 500;
+  height: auto !important; /* overrulet eerdere height-regels */
 }
