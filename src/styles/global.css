@@ -106,3 +106,14 @@ a, a:visited { color:#b8a86d; }
   background-color: #082616;
   color: #b8a86d;
 }
+
+/* Responsive fix voor iPhone */
+@media (max-width: 640px) {
+  .hero {
+    height: 280px;
+    background-position: center 30%;
+  }
+  .page-title {
+    font-size: 1.6rem;
+  }
+}
