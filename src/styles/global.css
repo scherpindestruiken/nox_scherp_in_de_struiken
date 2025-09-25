@@ -111,9 +111,24 @@ a, a:visited { color:#b8a86d; }
 @media (max-width: 640px) {
   .hero {
     height: 280px;
-    background-position: center 30%;
+    background-position: center 25%;
   }
   .page-title {
     font-size: 1.6rem;
+  }
+}
+
+/* -- Mobile hero tuning: alleen subpagina's met .hero -- */
+@media (max-width: 480px) {
+  .hero{
+    height: 360px;               /* wat hoger, zodat Nox past */
+    background-position: center 25%;  /* iets hoger in beeld */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+  .hero{
+    height: 420px;               /* tablet-hoogte */
+    background-position: center 35%;
   }
 }
