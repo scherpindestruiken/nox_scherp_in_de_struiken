@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+const { title = "Pagina", hero = null } = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-green" style={hero ? `--hero-img: url('${hero}')` : ""}>
+    <header>
+      <input class="nav-toggle" type="checkbox" id="menu-toggle" />
+      <label class="hamburger" for="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="drawer" role="dialog" aria-label="Hoofdmenu">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Nox' blog</a></li>
+            <li><a href="/fotos">Nox' foto's</a></li>
+            <li><a href="/puzzel">Nox' puzzelpagina</a></li>
+            <li><a href="/wedstrijd">Nox' wedstrijd</a></li>
+            <li><a href="/contact">Contact met Nox</a></li>
+            <li style="margin-top:24px;"><a href="/login">Login</a></li>
+            <li><a href="/account">Account</a></li>
+            <li><a href="/beheer">Beheer</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {hero && <div class="hero"></div>}
+
+    <div class="page-title">
+      <h1>{title}</h1>
+    </div>
+
+    <!-- Vast contentblok -->
+    <section class="page-content">
+      <slot />
+    </section>
+  </body>
+</html>

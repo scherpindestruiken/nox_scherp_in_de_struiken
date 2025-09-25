@@ -16,6 +16,12 @@
   "type": "commonjs",
   "devDependencies": {
     "@astrojs/cloudflare": "^12.6.9",
-    "astro": "^5.13.10"
+    "astro": "^5.13.10",
+    "wrangler": "^4.39.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "cloudinary": "^2.7.0",
+    "nodemailer": "^7.0.6"
   }
 }

@@ -1,0 +1,108 @@
+
+/* Hero banner op testpagina e.d. */
+.hero {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to top, rgba(8,38,22,0.95) 0%, rgba(8,38,22,0) 20%),
+              linear-gradient(to bottom, rgba(8,38,22,0) 70%, rgba(8,38,22,1) 100%),
+              url("/images/nox-schrijft-hero2.png") no-repeat center center;
+  background-size: cover;
+}/* Groen vlak-pagina's */
+body.bg-green {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #082616;
+  color: #b8a86d;
+}
+/* Hamburger + drawer (basis) */
+.nav-toggle{position:absolute;left:-9999px;}
+.hamburger{
+  position:fixed; top:12px; left:12px;
+  width:40px; height:32px; display:flex; flex-direction:column;
+  justify-content:space-between; padding:4px 6px; cursor:pointer;
+  z-index:1001; user-select:none;
+}
+.hamburger span{display:block;height:3px;border-radius:2px;background:#b8a86d;}
+.drawer{
+  position:fixed; top:0; left:0;
+  width:auto; max-width:80%;
+  height:auto; max-height:100vh;
+  transform:translateX(-100%);
+  transition:transform .25s ease;
+  background-color:#082616; color:#b8a86d;
+  z-index:1000; padding:64px 16px 16px;
+  box-shadow:2px 0 20px rgba(0,0,0,.35);
+}
+.nav-toggle:checked ~ .drawer{transform:translateX(0);}
+.drawer nav ul{list-style:none;margin:0;padding:0;}
+.drawer nav li{margin:0 0 12px 0;}
+.drawer nav a{color:#b8a86d;text-decoration:none;font-weight:600;}
+.drawer nav a:hover,.drawer nav a:focus{text-decoration:underline;}
+
+/* Homepage achtergrond (vol beeld, fixed) */
+body.bg-image {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url("/images/achtergrond.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #b8a86d;
+}
+/* Titel onder hero */
+.page-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+.page-title h1 {
+  color: var(--nox-gold);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+button, .btn, input[type=submit] {
+  color: #b8a86d;
+}
+
+/* === Globale kleurafspraak: alles #b8a86d === */
+:root { --nox-gold: #b8a86d; }
+
+html, body { color: #b8a86d !important; }
+
+.page-content, header, nav, .drawer, main { color: #b8a86d !important; }
+
+:is(p, li, span, label, small, h1, h2, h3, h4, h5, h6) { color: #b8a86d !important; }
+
+a, a:visited, a:active, a:hover, a:focus { color: #b8a86d !important; }
+
+button, .btn, input[type=submit] { color: #b8a86d !important; border-color: #b8a86d !important; }
+
+/* base colors */
+body, p, h1, h2, h3, h4, h5, h6 { color:#b8a86d; }
+a, a:visited { color:#b8a86d; }
+
+/* Hero met variabele afbeelding */
+.hero {
+  width: 100%;
+  height: 500px;
+  background: var(--hero-img) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,38,22,0) 55%, rgba(8,38,22,0.85) 90%, #082616 100%);
+  pointer-events: none;
+}
+
+/* Vast contentblok onder de titel (alle subpagina's) */
+.page-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #082616;
+  color: #b8a86d;
+}

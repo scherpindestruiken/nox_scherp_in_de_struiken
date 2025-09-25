@@ -1,1 +1,36 @@
-<html><body><h1>Hallo Astro</h1></body></html>
+---
+import "../styles/global.css";
+---
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homepage</title>
+  </head>
+  <body class="bg-image bg-image">
+    <input id="nav-toggle" class="nav-toggle" type="checkbox" />
+    <label for="nav-toggle" class="hamburger" aria-label="Menu" aria-controls="side-drawer">
+      <span></span><span></span><span></span>
+    </label>
+
+    <aside id="side-drawer" class="drawer" role="navigation" aria-label="Hoofdmenu">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog">Nox' blog</a></li>
+          <li><a href="/fotos">Nox' foto's</a></li>
+          <li><a href="/puzzel">Nox' puzzelpagina</a></li>
+          <li><a href="/wedstrijd">Nox' wedstrijd</a></li>
+          <li><a href="/contact">Contact met Nox</a></li>
+          <li style="margin-top:20px;"><a href="/login">Login</a></li>
+          <li><a href="/account">Account</a></li>
+          <li><a href="/beheer">Beheer</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="page-content">
+    </main>
+  </body>
+</html>
