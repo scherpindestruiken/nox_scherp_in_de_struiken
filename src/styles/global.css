@@ -112,3 +112,10 @@ a, a:visited { color:#b8a86d; }
   aspect-ratio: 1920 / 500;
   height: auto !important; /* overrulet eerdere height-regels */
 }
+/* Hero groter op mobiel/tablet */
+@media (max-width: 480px){
+  .hero{ min-height: 360px; }
+}
+@media (min-width: 481px) and (max-width: 768px){
+  .hero{ min-height: 420px; }
+}
